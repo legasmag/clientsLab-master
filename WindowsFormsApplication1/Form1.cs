@@ -30,10 +30,8 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                xmlEmployees = XmlReader.Create("employee.xml", new XmlReaderSettings());
-                //xmlClients = XmlReader.("client.xml", new XmlReaderSettings());
-                //dgsdgds
-                //xmlClients = XmlReader.Create(new StringReader(GET("http://localhost/docxml.php?file=client")));
+                //xmlEmployees = XmlReader.Create("employee.xml", new XmlReaderSettings());
+                xmlEmployees = XmlReader.Create(new StringReader(GET("http://localhost/docxml.php?file=employee")));
 
                 dsEmployees = new DataSet();
                 dsEmployees.ReadXml(xmlEmployees);
@@ -102,6 +100,7 @@ namespace WindowsFormsApplication1
             {
             try
             {
+                //xmlEmployees = XmlReader.Create("items.xml", new XmlReaderSettings());
                 xmlItems = XmlReader.Create(new StringReader(GET("http://localhost/docxml.php?file=items")));
                 dsItems = new DataSet();
                 dsItems.ReadXml(xmlItems);
@@ -131,11 +130,12 @@ namespace WindowsFormsApplication1
         private void orders (){
             try
             {
+                //xmlEmployees = XmlReader.Create("orders.xml", new XmlReaderSettings());
                 xmlOrders = XmlReader.Create(new StringReader(GET("http://localhost/docxml.php?file=orders")));
                 dsOrders = new DataSet();
                 dsOrders.ReadXml(xmlOrders);
                 dataGridView3.DataSource = dsOrders.Tables[0];
-                string[] namecol = new string[5] { "№ заказа", "№ клиента", "Дата продажи", "Дата доставки", "№ рабочего" };
+                string[] namecol = new string[5] { "№ заказа", "№ клиента", "Дата продажи", "Дата доставки", "№ сотрудника" };
                 for (int i = 0; i < 5; i++) dataGridView3.Columns[i].HeaderText = namecol[i];
             }
             catch (Exception ex)
@@ -145,6 +145,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
+                //xmlEmployees = XmlReader.Create("parts.xml", new XmlReaderSettings());
                 xmlParts = XmlReader.Create(new StringReader(GET("http://localhost/docxml.php?file=parts")));
                 dsParts = new DataSet();
                 dsParts.ReadXml(xmlParts);
