@@ -63,6 +63,7 @@
             this.toolTip1.SetToolTip(this.dataGridView1, "Таблица для вывода сотрудников");
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.dataGridView1_HelpRequested);
             this.dataGridView1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseMove);
             // 
             // dataGridView2
@@ -73,6 +74,7 @@
             this.dataGridView2.Size = new System.Drawing.Size(376, 167);
             this.dataGridView2.TabIndex = 1;
             this.toolTip1.SetToolTip(this.dataGridView2, "Таблица для вывода предметов");
+            this.dataGridView2.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.dataGridView2_HelpRequested);
             this.dataGridView2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dataGridView2_MouseMove);
             // 
             // button1
@@ -164,6 +166,7 @@
             this.dataGridView3.TabIndex = 7;
             this.toolTip1.SetToolTip(this.dataGridView3, "Таблица для вывода заказов");
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
+            this.dataGridView3.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.dataGridView3_HelpRequested);
             this.dataGridView3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dataGridView3_MouseMove);
             // 
             // dataGridView4
@@ -175,6 +178,7 @@
             this.dataGridView4.TabIndex = 8;
             this.toolTip1.SetToolTip(this.dataGridView4, "Таблица для вывода деталей");
             this.dataGridView4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellClick);
+            this.dataGridView4.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.dataGridView4_HelpRequested);
             this.dataGridView4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dataGridView4_MouseMove);
             // 
             // label2

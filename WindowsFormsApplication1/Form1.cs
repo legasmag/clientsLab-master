@@ -173,7 +173,7 @@ namespace WindowsFormsApplication1
         private void helpContextToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HelpNavigator navigator = HelpNavigator.TopicId;
-            Help.ShowHelp (this, @"C:\Users\Кирилл\Documents\Visual Studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\help.chm", navigator);
+            Help.ShowHelp (this, @"10.html", navigator);
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -209,6 +209,26 @@ namespace WindowsFormsApplication1
         private void dataGridView4_MouseMove(object sender, MouseEventArgs e)
         {
             label5.Text = "Таблица для отображения деталей";
+        }
+
+        private void dataGridView1_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            System.Diagnostics.Process.Start(@"20.html");
+        }
+
+        private void dataGridView3_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            System.Diagnostics.Process.Start(@"30.html");
+        }
+
+        private void dataGridView2_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            System.Diagnostics.Process.Start(@"40.html");
+        }
+
+        private void dataGridView4_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            System.Diagnostics.Process.Start(@"50.html");
         }
     }
 }
